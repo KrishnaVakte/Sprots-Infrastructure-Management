@@ -9,15 +9,15 @@ const Sidebar = () => {
       <div className="sidebar-options">
         <NavLink to='/add' className="sidebar-option">
           <img src={assets.add_icon} alt="" />
-          <p>Add Items</p>
+          <p>Add Facilities</p>
         </NavLink>
         <NavLink to='/list' className="sidebar-option">
           <img src={assets.order_icon} alt="" />
-          <p>List Items</p>
+          <p>List Facilities</p>
         </NavLink>
         <NavLink to='/orders' className="sidebar-option">
           <img src={assets.order_icon} alt="" />
-          <p>Order</p>
+          <p>Bookings</p>
         </NavLink>
       </div>
       
