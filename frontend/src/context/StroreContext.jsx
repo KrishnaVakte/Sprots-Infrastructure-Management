@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-// import { food_list } from "../assets/assets";
+// import { Sport_list } from "../assets/assets";
 
 
 export const StoreContext = createContext(null)
@@ -10,7 +10,7 @@ const StroeContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const url = String(import.meta.env.VITE_BACKEND_URL);
     const [token, setToken] = useState("");
-    const [food_list, setFoodList] = useState([]);
+    const [Sport_list, setSportList] = useState([]);
     const [loading, setLoading] = useState(false)
 
     const addToCart = async (itemId) => {
@@ -37,16 +37,16 @@ const StroeContextProvider = (props) => {
         let totalAmount = 0;
         for (const item in cartItems) {
             if (cartItems[item] > 0) {
-                let itemInfo = food_list.find((product) => product._id === item);
+                let itemInfo = Sport_list.find((product) => product._id === item);
                 totalAmount += itemInfo.price * cartItems[item]
             }
         }
         return totalAmount;
     }
 
-    const fetechFoodList = async () => {
-        const response = await axios.get(url + "/api/food/list");
-        setFoodList(response.data.data);
+    const fetechSportList = async () => {
+        const response = await axios.get(url + "/api/Sport/list");
+        setSportList(response.data.data);
     }
 
     const loadCartData = async (token) => {
@@ -57,7 +57,7 @@ const StroeContextProvider = (props) => {
 
     useEffect(() => {
         ; (async () => {
-            await fetechFoodList();
+            await fetechSportList();
             if (localStorage.getItem("token")) {
                 setToken(localStorage.getItem("token"));
                 await loadCartData(localStorage.getItem("token"));
@@ -66,7 +66,7 @@ const StroeContextProvider = (props) => {
     },[])
 
     const contextValue = {
-        food_list,
+        Sport_list,
         cartItems,
         setCartItems,
         addToCart,

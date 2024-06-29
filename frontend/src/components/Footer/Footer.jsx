@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="footer-content">
               <div className="footer-content-left">
                   <img className='logo' src={assets.logo} alt="" />
-                  <p>Discover world-class sports facilities designed to cater to athletes and enthusiasts of all levels. Our platform connects you with premier venues, ensuring you find the perfect place for your sporting needs. From booking to playing, we make every step effortless and enjoyable. Join our community today and elevate your sporting experience with us!</p>
+                  <p>Discover world-class Sports facilities designed to cater to athletes and enthusiasts of all levels. Our platform connects you with premier venues, ensuring you find the perfect place for your Sporting needs. From booking to playing, we make every step effortless and enjoyable. Join our community today and elevate your Sporting experience with us!</p>
                   <div className="footer-social-icons">
                       <img src={assets.facebook_icon} alt="" />
                       <img src={assets.twitter_icon} alt="" />

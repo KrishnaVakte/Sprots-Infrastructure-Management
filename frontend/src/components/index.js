@@ -1,8 +1,8 @@
 import Navbar from "./Navbar/Navbar"
 import Header from "./Header/Header"
-import ExploreMunu from "./ExploreMenu/ExploreMunu"
-import FoodDisplay from "./FoodDisplay/FoodDisplay"
-import FoodItem from "./FoodItem/FoodItem"
+import ExploreMunu from "./Explore/ExploreMunu"
+import SportDisplay from "./SportDisplay/SportDisplay"
+import SportItem from "./SportItem/SportItem"
 import Footer from "./Footer/Footer"
 import AppDownload from "./AppDownload/AppDownload"
 import LoginPopup from "./LoginPopup/LoginPopup"
@@ -13,8 +13,8 @@ export {
     Navbar,
     Header,
     ExploreMunu,
-    FoodDisplay,
-    FoodItem,
+    SportDisplay,
+    SportItem,
     Footer,
     AppDownload,
     LoginPopup,

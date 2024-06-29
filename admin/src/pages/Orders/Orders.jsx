@@ -40,7 +40,7 @@ const Orders = ({ url }) => {
           <div key={index} className="order-item">
             <img src={assets.parcel_icon} alt="" />
             <div>
-              <p className="order-item-food">
+              <p className="order-item-Sport">
                 {order.items.map((item, index) => {
                   if (index === order.items.length - 1) {
                     return item.name + " X " + item.quantity;

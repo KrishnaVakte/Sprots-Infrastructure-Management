@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 
 const sendEmail = async (email, subject, body) => {
     try {
-        const transporter = nodemailer.createTransport({
+        const tranSporter = nodemailer.createTranSport({
             host: process.env.HOST,
             service: process.env.SERVICE,
             port: Number(process.env.EMAIL_PORT),
@@ -13,8 +13,8 @@ const sendEmail = async (email, subject, body) => {
             }
         });
 
-        await transporter.sendMail({
-            from: `"Tomato || Food Delivery App" <kvakte00@gmail.com>`,
+        await tranSporter.sendMail({
+            from: `"Tomato || Sport Delivery App" <kvakte00@gmail.com>`,
             to: email,
             subject,
             attachments: [{

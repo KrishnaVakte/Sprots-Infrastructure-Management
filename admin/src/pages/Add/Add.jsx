@@ -11,7 +11,7 @@ const Add = ({url}) => {
         name: "",
         description: "",
         price: "",
-        category: "Salad"
+        category: "Outdoor"
     })
 
     const onChangeHandler = (event) => {
@@ -29,13 +29,13 @@ const Add = ({url}) => {
         formData.append("category", data.category)
         formData.append("image", image)
 
-        const response = await axios.post(`${url}/api/food/add`, formData);
+        const response = await axios.post(`${url}/api/Sport/add`, formData);
         if (response.data.success) {
             setData({
                 name: "",
                 description: "",
                 price: "",
-                category: "Salad"
+                category: "Outdoor"
             })
             setImage(false);
             toast.success(response.data.message);
@@ -69,7 +69,7 @@ const Add = ({url}) => {
                         <select onChange={onChangeHandler} name="category">
                             <option value="Aquatic">Aquatic</option>
                             <option value="Indoor">Indoor </option>
-                            <option value="Outdoor">Outdoor </option>
+                            <option value="Outdoor" defaultChecked>Outdoor </option>
                             <option value="Athletic">Athletic </option>
                             <option value="Specialized">Specialized </option>
                         </select>

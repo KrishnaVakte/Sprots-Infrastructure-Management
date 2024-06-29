@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Home.css'
-import { AppDownload, ExploreMunu, FoodDisplay, Header } from '../../components'
+import { AppDownload, ExploreMunu, SportDisplay, Header } from '../../components'
 
 const Home = () => {
 
@@ -10,7 +10,7 @@ const Home = () => {
     <div>
       <Header />
       <ExploreMunu category={category} setCategory={setCategory} />
-      <FoodDisplay category={category}/>
+      <SportDisplay category={category}/>
       <AppDownload/>
     </div>
   )

@@ -26,14 +26,6 @@ const orderSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    startTime: {
-        type: Date,
-        required: true,
-    },
-    endTime: {
-        type: Date,
-        required:true,
-    },
     payment: {
         type: Boolean,
         default: false 
